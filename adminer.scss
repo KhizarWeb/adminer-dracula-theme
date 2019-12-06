@@ -427,7 +427,7 @@ input[type="radio"] {
     cursor: pointer;
     position: relative;
     margin: 0.25rem 0.5rem;
-    transition: border-color 0.24s;
+    transition: all 0.24s ease;
 
     &:focus {
         outline: 0;
@@ -449,13 +449,28 @@ input[type="radio"] {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #0d3a33;
+        color: #282a36;
         font-size: 1rem;
     }
 }
 
 input[type="radio"] {
-    border-radius: 1.2rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 0 0.2rem #282a36, 0 0 0 0.3rem rgba(#fff, 0.08);
+    margin: 0.25rem 0.8rem 0.25rem 0.5rem;
+
+    &:checked {
+        background-color: #50fa7b;
+        box-shadow: 0 0 0 0.2rem #282a36, 0 0 0 0.3rem #50fa7b;
+
+    }
+   
+    &:checked::before {
+        content: "";
+    }
 }
 
 #menu {
